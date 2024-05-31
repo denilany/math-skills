@@ -8,7 +8,7 @@ This program is written in Go to perform statistical calculations such as, (this
 - Variance
 - Standard Deviation
 
-## Prerequisite
+## Prerequisites
 For this program to run, a Go environment need to be installed first.
 This can be downloaded [here](https://go.dev/dl/).
 
