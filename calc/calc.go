@@ -6,6 +6,7 @@ import (
 	"math"
 	"os"
 	"strconv"
+	"strings"
 
 	"math-skills/stat"
 )
@@ -31,7 +32,7 @@ func Calc(str string) (string, error) {
 	var arr []float64
 	lineNum := 0 // Track line number
 	for scanner.Scan() {
-		line := scanner.Text()
+		line := strings.TrimSpace(scanner.Text())
 		lineNum++
 
 		if line == "" {
