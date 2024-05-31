@@ -8,22 +8,37 @@ This program is written in Go to perform statistical calculations such as, (this
 - Variance
 - Standard Deviation
 
+## Prerequisite
+For this program to run, a Go environment need to be installed first.
+This can be downloaded [here](https://go.dev/dl/).
+
 ## Instalation
 
 Clone the repo in your local machine
 
-    $ git clone https://learn.zone01kisumu.ke/git/danyonyi/math-skills.git
+```bash
+ $ git clone https://github.com/denilany/math-skills.git
+ ```
 
-cd into math-skills
+Change the directory to `math-skills` by running this:
 
-    $ cd math-skills
+```bash
+ $ cd math-skills
+ ```
 
 ## Usage
 
 Run the program
 
-    $ go run . data.txt 
-    // data.txt is the file that contains data (numbers) for the program to compute the statistics
+```go
+ $ go run . data.txt 
+ /*
+ data.txt is the file that contains data (numbers) for the program to compute the statistics
+ */
+```
+
+## File data
+Since the statistics is calculated from the data.txt file present, it it important to note that each individual line should only hold a single set of number/numbers with no spaces in between them. 
 
 ## Challenges
  
