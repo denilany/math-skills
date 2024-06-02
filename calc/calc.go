@@ -24,15 +24,16 @@ func Calc(str string) (string, error) {
 		return "", fmt.Errorf("error getting file info: %s", err)
 	}
 	if fileInfo.Size() == 0 {
-		return "", fmt.Errorf("file is empty")
+		return "", fmt.Errorf("%s file is empty", str)
 	}
 
+	var arr []float64
 	scanner := bufio.NewScanner(file)
 
-	var arr []float64
 	lineNum := 0 // Track line number
 	for scanner.Scan() {
-		line := strings.TrimSpace(scanner.Text())
+		scanLine := scanner.Text()
+		line := strings.TrimSpace(scanLine)
 		lineNum++
 
 		if line == "" {
@@ -54,6 +55,11 @@ func Calc(str string) (string, error) {
 	}
 	if err := scanner.Err(); err != nil {
 		return "", fmt.Errorf("error scanning text %s", err)
+	}
+
+	// Check for file with just empty spaces
+	if len(arr) == 0 {
+		return "", fmt.Errorf("file data appears to be empty")
 	}
 
 	// Check for single population data
